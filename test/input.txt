@@ -62,9 +62,32 @@
   find Charlie Betsy
 
 ##########################################################
-# test delete person command
+# test edit person command
 ##########################################################
 
+# last active view: [1] betsy [2] charlie
+
+  # should catch invalid args format
+  edit
+  edit 1
+  edit 1 p/00000000 e/abc@abc.abc
+
+  # should catch invalid index
+  edit -1 p/11111111
+  edit 0 p/22222222
+  edit 3 p/33333333
+
+  # edits person based on last active view's index
+  edit 2 p/44444444
+  list
+  edit 5 e/asd@asd.asd
+  list
+
+##########################################################
+# test delete person command
+##########################################################
+  
+  find Charlie Betsy
 # last active view: [1] betsy [2] charlie
 
   # should catch invalid args format

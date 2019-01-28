@@ -1,54 +1,11 @@
 || ===================================================
 || ===================================================
-|| AddessBook Level 1 - Version 1.0
-|| Welcome to your Address Book!
-|| ===================================================
-|| The given file name [ ] is not a valid file name!
-|| Exiting Address Book... Good bye!
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| AddessBook Level 1 - Version 1.0
-|| Welcome to your Address Book!
-|| ===================================================
-|| The given file name [directoryThatDoesNotExist/valid.filename] is not a valid file name!
-|| Exiting Address Book... Good bye!
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| AddessBook Level 1 - Version 1.0
-|| Welcome to your Address Book!
-|| ===================================================
-|| The given file name [.noFilename] is not a valid file name!
-|| Exiting Address Book... Good bye!
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| AddessBook Level 1 - Version 1.0
-|| Welcome to your Address Book!
-|| ===================================================
-|| The given file name [data/notRegularFile.txt] is not a valid file name!
-|| Exiting Address Book... Good bye!
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| AddessBook Level 1 - Version 1.0
-|| Welcome to your Address Book!
-|| ===================================================
-|| Enter command: || [Command entered:exit]
-|| Exiting Address Book... Good bye!
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| ===================================================
-|| AddessBook Level 1 - Version 1.0
+|| AddressBook Level 1 - Version 1.0
 || Welcome to your Address Book!
 || ===================================================
 || Using default storage file : addressbook.txt
+|| Storage file missing: addressbook.txt
+|| Created new empty storage file: addressbook.txt
 || Enter command: || [Command entered:  sfdfd]
 || Invalid command format: sfdfd 
 || add: Adds a person to the address book.
@@ -65,6 +22,10 @@
 || delete: Deletes a person identified by the index number used in the last find/list call.
 || 	Parameters: INDEX
 || 	Example: delete 1
+|| 
+|| edit: Edits the data of a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX PREFIX/NEW DATA
+|| 	Example: edit 1 p/98765432
 || 
 || clear: Clears address book permanently.
 || 	Example: clear
@@ -204,6 +165,74 @@
 || 
 || 2 persons found!
 || ===================================================
+|| Enter command: || [Command entered:  edit]
+|| Invalid command format: edit 
+|| edit: Edits the data of a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX PREFIX/NEW DATA
+|| 	Example: edit 1 p/98765432
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 1]
+|| Invalid command format: edit 
+|| edit: Edits the data of a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX PREFIX/NEW DATA
+|| 	Example: edit 1 p/98765432
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 1 p/00000000 e/abc@abc.abc]
+|| Invalid command format: edit 
+|| edit: Edits the data of a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX PREFIX/NEW DATA
+|| 	Example: edit 1 p/98765432
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit -1 p/11111111]
+|| Invalid command format: edit 
+|| edit: Edits the data of a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX PREFIX/NEW DATA
+|| 	Example: edit 1 p/98765432
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 0 p/22222222]
+|| Invalid command format: edit 
+|| edit: Edits the data of a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX PREFIX/NEW DATA
+|| 	Example: edit 1 p/98765432
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 3 p/33333333]
+|| The person index provided is invalid
+|| ===================================================
+|| Enter command: || [Command entered:  edit 2 p/44444444]
+|| Edited Person: Charlie Dickson  Phone Number: 44444444  Email: charlie.d@nus.edu.sg
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com
+|| 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 	3. Charlie Dickson  Phone Number: 44444444  Email: charlie.d@nus.edu.sg
+|| 	4. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 	5. Esther Potato  Phone Number: 555555  Email: esther@notreal.potato
+|| 
+|| 5 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  edit 5 e/asd@asd.asd]
+|| Edited Person: Esther Potato  Phone Number: 555555  Email: asd@asd.asd
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com
+|| 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 	3. Charlie Dickson  Phone Number: 44444444  Email: charlie.d@nus.edu.sg
+|| 	4. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 	5. Esther Potato  Phone Number: 555555  Email: asd@asd.asd
+|| 
+|| 5 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  find Charlie Betsy]
+|| 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 	2. Charlie Dickson  Phone Number: 44444444  Email: charlie.d@nus.edu.sg
+|| 
+|| 2 persons found!
+|| ===================================================
 || Enter command: || [Command entered:  delete]
 || Invalid command format: delete 
 || delete: Deletes a person identified by the index number used in the last find/list call.
@@ -236,7 +265,7 @@
 || The person index provided is invalid
 || ===================================================
 || Enter command: || [Command entered:  delete 2]
-|| Deleted Person: Charlie Dickson  Phone Number: 333333  Email: charlie.d@nus.edu.sg
+|| Deleted Person: Charlie Dickson  Phone Number: 44444444  Email: charlie.d@nus.edu.sg
 || ===================================================
 || Enter command: || [Command entered:  delete 2]
 || Person could not be found in address book
@@ -245,12 +274,12 @@
 || 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com
 || 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 || 	3. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
-|| 	4. Esther Potato  Phone Number: 555555  Email: esther@notreal.potato
+|| 	4. Esther Potato  Phone Number: 555555  Email: asd@asd.asd
 || 
 || 4 persons found!
 || ===================================================
 || Enter command: || [Command entered:  delete 4]
-|| Deleted Person: Esther Potato  Phone Number: 555555  Email: esther@notreal.potato
+|| Deleted Person: Esther Potato  Phone Number: 555555  Email: asd@asd.asd
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com
